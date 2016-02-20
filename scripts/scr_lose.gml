@@ -1,10 +1,15 @@
 /// scr_lose()
 // Save highscores
-ini_open("highscore.ini");
+ini_open("save.ini");
 if (score > global.highscore) {
-    ini_write_real("best", "highscore", score);
+    ini_write_real("score", "highscore", score);
 }
 ini_close();
 
-game_restart();
+if (audio_is_playing(snd_fail))
+    audio_stop_sound(snd_fail);
+if (global.soundAll && global.soundFX)
+    audio_play_sound(snd_fail, 1, false);
+
+room_restart();
 

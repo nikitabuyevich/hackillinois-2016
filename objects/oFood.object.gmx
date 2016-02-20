@@ -70,6 +70,10 @@ if (y &gt; 80 &amp;&amp; !passedSpace) {
 if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
     global.detectFood = true;
     if (global.tap) {
+        if (audio_is_playing(snd_success))
+            audio_stop_sound(snd_success);
+        if (global.soundAll &amp;&amp; global.soundFX)
+            audio_play_sound(snd_success, 1, false);
         score++;
         if (x == 80) {
             global.position = false;

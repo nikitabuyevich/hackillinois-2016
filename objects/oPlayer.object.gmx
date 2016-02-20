@@ -30,7 +30,56 @@ image_xscale = 5;
 image_yscale = 5;
 image_angle = 270;
 playerWalkedIn = false;
-image_speed = 0;
+playerIdleSpeed = 0.35;
+image_speed = playerIdleSpeed;
+alarmSpeed = room_speed/2;
+alarm[0] = alarmSpeed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alarm[0] = alarmSpeed;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>alarm[1] = alarmSpeed;
 </string>
           </argument>
         </arguments>
@@ -75,6 +124,25 @@ if (global.eatAnim &amp;&amp; global.position) {
     sprite_index = spr_player_eating;
 }
 
+if (alarm[0] != -1) {
+    if (image_xscale &gt; 4) {
+        image_xscale -=0.025;
+        image_yscale -=0.025;
+    } else {
+        alarm[0] = -1;
+        alarm[1] = alarmSpeed;
+    }
+}
+else if (alarm[1] != -1) {
+    if (image_xscale &lt; 5) {
+        image_xscale +=0.025;
+        image_yscale +=0.025;    
+    } else {
+        alarm[1] = -1;
+        alarm[0] = alarmSpeed;
+    }
+}
+
 </string>
           </argument>
         </arguments>
@@ -98,7 +166,7 @@ if (global.eatAnim &amp;&amp; global.position) {
           <argument>
             <kind>1</kind>
             <string>if (sprite_index == spr_player_eating) {
-    image_speed = 0;
+    image_speed = playerIdleSpeed;
     image_angle = 270;
     sprite_index = spr_player_idle;
     global.eatAnim = false;

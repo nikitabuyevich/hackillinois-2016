@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="8" enumb="64">
+    <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,11 +25,21 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_text(room_width/2-50, room_height/2, "score: " + string(score));
-//draw_text(room_width/2-50, room_height/2+25, "highscore: " + string(global.highscore));
+            <string>/// generate random value once
+randMus = floor(random(3));
 
-draw_text(room_width/2-50, room_height/2, "x: " + string(oPlayer.image_xscale));
-draw_text(room_width/2-50, room_height/2+25, "y: " + string(oPlayer.image_yscale));
+audio_stop_sound(snd_theme_a);
+audio_stop_sound(snd_theme_b);
+audio_stop_sound(snd_theme_c);
+
+if (global.soundAll &amp;&amp; global.soundMusic) {
+    if (randMus == 0)
+            audio_play_sound(snd_theme_a, 1, true);
+    if (randMus == 1)
+            audio_play_sound(snd_theme_b, 1, true);
+    if (randMus == 2)
+            audio_play_sound(snd_theme_c, 1, true);
+}
 </string>
           </argument>
         </arguments>

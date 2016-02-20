@@ -36,8 +36,11 @@ global.eatAnim = false;
 global.detectFood = false;
 
 // highscore variable
-ini_open("highscore.ini");
-global.highscore =  ini_read_real("best", "highscore", 0);
+ini_open("save.ini");
+global.highscore =  ini_read_real("score", "highscore", 0);
+global.soundAll = ini_read_real("sound", "all", 1);
+global.soundFX = ini_read_real("sound", "fx", 1);
+global.soundMusic = ini_read_real("sound", "music", 1);
 ini_close();    
 </string>
           </argument>
