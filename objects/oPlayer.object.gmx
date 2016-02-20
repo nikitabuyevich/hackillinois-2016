@@ -60,16 +60,21 @@ image_speed = 0;
         playerWalkedIn = true;        
 }
 
-if (global.eatAnim &amp;&amp; global.position) {
-    image_speed = 0.2*global.scrollSpeed;
-    image_angle = 180;
-    sprite_index = spr_player_eating;
-}
+// left side    
 if (global.eatAnim &amp;&amp; !global.position) {
     image_speed = 0.2*global.scrollSpeed;
     image_angle = 0;
+    x=80+175;
     sprite_index = spr_player_eating;
 }
+// right side    
+if (global.eatAnim &amp;&amp; global.position) {
+    image_speed = 0.2*global.scrollSpeed;
+    image_angle = 180;
+    x = 640-175;
+    sprite_index = spr_player_eating;
+}
+
 </string>
           </argument>
         </arguments>
