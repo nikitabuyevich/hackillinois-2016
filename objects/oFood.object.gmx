@@ -26,6 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>passedSpace = false;
+image_xscale = 5;
+image_yscale = 5;
+image_speed = 0;
+image_index = 1 + floor(random(4));
+
 randAngle = floor(random(4));
 if (randAngle==0)
     image_angle = 0;
@@ -58,16 +63,16 @@ else
           <argument>
             <kind>1</kind>
             <string>y+=global.scrollSpeed;
-if (y &gt; 16 &amp;&amp; !passedSpace) {
+if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;
 }
-if ((y &gt;= 240) &amp;&amp; (y &lt; 272)) {
+if ((y &gt;= 1200) &amp;&amp; (y &lt; 1360)) {
     if (global.tap) {
         score++;
         instance_destroy();
     }
-} else if ( y-16 &gt; room_height)
+} else if ( y-80 &gt; room_height)
     scr_lose();
 </string>
           </argument>

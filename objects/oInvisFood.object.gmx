@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_invis_food</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>oFood</parentName>
@@ -26,15 +26,15 @@
           <argument>
             <kind>1</kind>
             <string>y+=global.scrollSpeed;
-if (y &gt; 16 &amp;&amp; !passedSpace) {
+if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;
 }
-if ((y &gt;= 240) &amp;&amp; (y &lt; 272))
+if ((y &gt;= 1200) &amp;&amp; (y &lt; 1360))
     if (global.tap) {
         scr_lose();
 }
-else if ( y-16 &gt; room_height)
+else if ( y-80 &gt; room_height)
     instance_destroy();
     
 </string>

@@ -9,11 +9,13 @@
     <sprite>sprites\spr_left_box</sprite>
     <sprite>sprites\spr_invis_food</sprite>
     <sprite>sprites\spr_invis_box</sprite>
+    <sprite>sprites\spr_player_eating</sprite>
+    <sprite>sprites\spr_player_idle</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
   <scripts name="scripts">
-    <script>scripts\scr_generate_food.gml</script>
+    <script>scripts\scr_generate.gml</script>
     <script>scripts\scr_lose.gml</script>
   </scripts>
   <objects name="objects">
@@ -24,6 +26,7 @@
     <object>objects\oInvisFood</object>
     <object>objects\oGenerateInitial</object>
     <object>objects\oInitial</object>
+    <object>objects\oPlayer</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_StartScreen</room>

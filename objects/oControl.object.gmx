@@ -32,6 +32,12 @@ display_set_gui_size(room_width,room_height);
 // global variables
 score = 0;
 global.randGen = true;
+global.position = false;
+
+// highscore variable
+ini_open("highscore.ini");
+global.highscore =  ini_read_real("best", "highscore", 0);
+ini_close();    
 </string>
           </argument>
         </arguments>
@@ -56,7 +62,7 @@ global.randGen = true;
             <kind>1</kind>
             <string>global.tap = keyboard_check_pressed(vk_space);
 
-global.scrollSpeed = 0.9 + score/(80);
+global.scrollSpeed = (0.9 + score/(80))*5;
 </string>
           </argument>
         </arguments>

@@ -6,13 +6,13 @@ if (global.randGen) {
 if ((rand==0 || rand==1) && global.randGen) {
     global.randGen = false;
     if (randLoc==0)
-        i = instance_create(16, -16, oFood);
+        i = instance_create(80, -80, oFood);
     else
-        i = instance_create(128, -16, oFood);
+        i = instance_create(640, -80, oFood);
 } else if (global.randGen) {
     global.randGen = false;
     if (randLoc==0)
-        i = instance_create(16, -16, oInvisFood);
+        i = instance_create(80, -80, oInvisFood);
     else
-        i = instance_create(128, -16, oInvisFood);
+        i = instance_create(640, -80, oInvisFood);
 }

@@ -2,12 +2,36 @@
 <object>
   <spriteName>spr_invis_box</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>1</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="0" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>image_xscale = 5;
+image_yscale = 5;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
@@ -27,9 +51,9 @@
             <kind>1</kind>
             <string>y+=global.scrollSpeed;
 
-if (global.tap &amp;&amp; y&lt;=256) {
+if (global.tap &amp;&amp; y&lt;=1280) {
     scr_lose();
-} else if (y&gt;256)
+} else if (y&gt;1280)
     instance_destroy();
 </string>
           </argument>
