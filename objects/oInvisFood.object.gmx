@@ -30,13 +30,9 @@ if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;
 }
-if ((y &gt;= 1200) &amp;&amp; (y &lt; 1360))
-    if (global.tap) {
-        scr_lose();
-}
-else if ( y-80 &gt; room_height)
+if ( y-80 &gt; room_height)
     instance_destroy();
-    
+
 </string>
           </argument>
         </arguments>

@@ -67,9 +67,20 @@ if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;
 }
-if ((y &gt;= 1200) &amp;&amp; (y &lt; 1360)) {
+if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
+    global.detectFood = true;
     if (global.tap) {
         score++;
+        if (x == 80) {
+            global.position = false;
+            global.eatAnim = true;
+            global.detectFood = false;
+        }
+        else {
+            global.position = true;
+            global.eatAnim = true;
+            global.detectFood = false;
+        }
         instance_destroy();
     }
 } else if ( y-80 &gt; room_height)

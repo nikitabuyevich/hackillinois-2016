@@ -30,6 +30,7 @@ image_xscale = 5;
 image_yscale = 5;
 image_angle = 270;
 playerWalkedIn = false;
+image_speed = 0;
 </string>
           </argument>
         </arguments>
@@ -53,10 +54,49 @@ playerWalkedIn = false;
           <argument>
             <kind>1</kind>
             <string>if (!playerWalkedIn) {
-    if (y &gt; (room_height-40)) 
-        y-=2;
+    if (y &gt; 1220) 
+        y--;
     else 
         playerWalkedIn = true;        
+}
+
+if (global.eatAnim &amp;&amp; global.position) {
+    image_speed = 0.2*global.scrollSpeed;
+    image_angle = 180;
+    sprite_index = spr_player_eating;
+}
+if (global.eatAnim &amp;&amp; !global.position) {
+    image_speed = 0.2*global.scrollSpeed;
+    image_angle = 0;
+    sprite_index = spr_player_eating;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="7">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if (sprite_index == spr_player_eating) {
+    image_speed = 0;
+    image_angle = 270;
+    sprite_index = spr_player_idle;
+    global.eatAnim = false;
 }
 </string>
           </argument>

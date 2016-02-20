@@ -11,6 +11,8 @@
     <sprite>sprites\spr_invis_box</sprite>
     <sprite>sprites\spr_player_eating</sprite>
     <sprite>sprites\spr_player_idle</sprite>
+    <sprite>sprites\spr_detect</sprite>
+    <sprite>sprites\spr_area</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -27,6 +29,8 @@
     <object>objects\oGenerateInitial</object>
     <object>objects\oInitial</object>
     <object>objects\oPlayer</object>
+    <object>objects\oDetect</object>
+    <object>objects\oArea</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_StartScreen</room>
