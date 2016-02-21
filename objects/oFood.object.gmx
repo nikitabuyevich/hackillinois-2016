@@ -89,7 +89,7 @@ if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
         instanceDestroy = true;
         foodItem = image_index;
         image_index = 0;
-        image_speed = global.scrollSpeed/10-0.2;
+        image_speed = (global.scrollSpeed/10) - 0.35
         if (foodItem == 0)
             sprite_index = spr_unagi_die;
         else if (foodItem == 1)

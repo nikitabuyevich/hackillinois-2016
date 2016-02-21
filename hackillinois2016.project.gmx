@@ -35,6 +35,8 @@
       <sprite>sprites\spr_hamburger_die</sprite>
       <sprite>sprites\spr_unagi_die</sprite>
     </sprites>
+    <sprite>sprites\spr_avatar_idle</sprite>
+    <sprite>sprites\spr_avatar_eating</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
