@@ -23,6 +23,12 @@
     <sprite>sprites\spr_area</sprite>
     <sprite>sprites\spr_logo</sprite>
     <sprite>sprites\spr_bg</sprite>
+    <sprites name="Menu">
+      <sprite>sprites\spr_start</sprite>
+      <sprite>sprites\spr_fx</sprite>
+      <sprite>sprites\spr_music</sprite>
+      <sprite>sprites\spr_theme</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -48,6 +54,15 @@
     <object>objects\oLogo</object>
     <object>objects\oMenu</object>
     <object>objects\oBG</object>
+    <objects name="Menu">
+      <objects name="Music Menu">
+        <object>objects\oBtnFX</object>
+        <object>objects\oBtnMusic</object>
+        <object>objects\oBtnTheme</object>
+      </objects>
+      <object>objects\oStart</object>
+      <object>objects\oBGMenu</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Menu</room>

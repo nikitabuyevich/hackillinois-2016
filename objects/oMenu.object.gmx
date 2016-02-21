@@ -25,15 +25,12 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.tap = 0;
-soundMusic = virtual_key_add(room_width/2-25, room_height/2, 50, 50, vk_left);
-soundFX = virtual_key_add(room_width/2-25, room_height/2+75, 50, 50, vk_right);
-soundAll = virtual_key_add(room_width/2-25, room_height/2+150, 50, 50, vk_up);
-virtual_key_show(soundMusic);
-virtual_key_show(soundFX);
-virtual_key_show(soundAll);
-start = virtual_key_add(room_width/2-25, room_height/2+250, 50, 50, vk_down);
-virtual_key_show(start);
+            <string>/// declare virtual keys and global configs
+global.tap = 0;
+soundMusic = virtual_key_add(room_width/2+128-48, 940-96-48, 96, 96, vk_left);
+soundFX = virtual_key_add(room_width/2-128-48, 940-96-48, 96, 96, vk_right);
+soundAll = virtual_key_add(room_width/2-48, 940-96-48, 96, 96, vk_up);
+start = virtual_key_add(room_width/2-192, 620-96, 384, 192, vk_down);
 display_set_gui_size(room_width,room_height);
 
 // saved files variables
@@ -43,6 +40,55 @@ global.soundAll = ini_read_real("sound", "all", true);
 global.soundFX = ini_read_real("sound", "fx", true);
 global.soundMusic = ini_read_real("sound", "music", true);
 ini_close();  
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// create buttons
+instance_create(room_width/2, 620,oStart);
+instance_create(room_width/2-128, 940-96,oBtnFX);
+instance_create(room_width/2, 940-96,oBtnMusic);
+instance_create(room_width/2+128, 940-96,oBtnTheme);
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// generate moving BG
+instance_create(0, 0, oBGMenu);
 </string>
           </argument>
         </arguments>
@@ -135,18 +181,14 @@ if (keyboard_check_pressed(vk_down)) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(100, 100, global.soundMusic);
-draw_text(100, 200, global.soundFX);
-draw_text(100, 300, global.soundAll);
-
-draw_set_halign(fa_center);
+            <string>draw_set_halign(fa_center);
 draw_set_font(fnt_default);
 
 // draw font instructions
 draw_text_colour(room_width/2, room_height/2-300, "A buffe chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_white, c_white, c_white, c_white, 1);
 draw_text_colour(room_width/2+2, room_height/2-298, "A buffe chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_black, c_black, c_black, c_black, 0.2);
 
-draw_text_colour(room_width/2, room_height-220, "PROTIP: You can eat two plates#at once. Even if they're on# differnet sides.#He really doesn't wana pay!" , c_lime, c_lime, c_lime, c_lime, 1);
+draw_text_colour(room_width/2, room_height-220, "PROTIP: You can eat two plates#at once. Even if they're on# differnet sides.#He really doesn't wana pay!" , c_white, c_white, c_white, c_white, 1);
 draw_text_colour(room_width/2+1, room_height-219, "PROTIP: You can eat two plates#at once. Even if they're on# differnet sides.#He really doesn't wana pay!" , c_black, c_black, c_black, c_black, 0.2);
 </string>
           </argument>
