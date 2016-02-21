@@ -48,6 +48,8 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
+    <font>fonts\fnt_score</font>
+    <font>fonts\fnt_highscore</font>
   </fonts>
   <objects name="objects">
     <object>objects\oFood</object>
