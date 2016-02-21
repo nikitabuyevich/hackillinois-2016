@@ -22,27 +22,32 @@
     <sprite>sprites\spr_detect</sprite>
     <sprite>sprites\spr_area</sprite>
     <sprite>sprites\spr_logo</sprite>
+    <sprite>sprites\spr_bg</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_main</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_generate.gml</script>
     <script>scripts\scr_lose.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_default</font>
+  </fonts>
   <objects name="objects">
     <object>objects\oFood</object>
     <object>objects\oGenerate</object>
     <object>objects\oControl</object>
     <object>objects\oDraw</object>
     <object>objects\oInvisFood</object>
-    <object>objects\oGenerateInitial</object>
-    <object>objects\oInitial</object>
     <object>objects\oPlayer</object>
     <object>objects\oDetect</object>
     <object>objects\oArea</object>
     <object>objects\oMusic</object>
     <object>objects\oLogo</object>
     <object>objects\oMenu</object>
+    <object>objects\oBG</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Menu</room>

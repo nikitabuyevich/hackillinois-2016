@@ -28,6 +28,7 @@
             <string>instance_create(room_width/2, room_height, oPlayer);
 instance_create(0, 1120, oDetect);
 instance_create(0, 0, oArea);
+instance_create(0, 0, oBG);
 </string>
           </argument>
         </arguments>
