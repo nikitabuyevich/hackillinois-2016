@@ -19,15 +19,121 @@
         <exetype>2</exetype>
         <functionname></functionname>
         <codestring></codestring>
-        <whoName>oMenu</whoName>
+        <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>/// Intialize buttons
-key = virtual_key_add(960, 540, 50, 50, vk_left);
-virtual_key_show(key);
+            <string>global.tap = 0;
+soundMusic = virtual_key_add(room_width/2, room_height/2, 50, 50, vk_left);
+soundFX = virtual_key_add(room_width/2, room_height/2+75, 50, 50, vk_right);
+soundAll = virtual_key_add(room_width/2, room_height/2+150, 50, 50, vk_up);
+virtual_key_show(soundMusic);
+virtual_key_show(soundFX);
+virtual_key_show(soundAll);
+start = virtual_key_add(room_width/2, room_height/2+250, 50, 50, vk_down);
+virtual_key_show(start);
+display_set_gui_size(room_width,room_height);
+
+// saved files variables
+ini_open("save.ini");
+global.highscore =  ini_read_real("score", "highscore", 0);
+global.soundAll = ini_read_real("sound", "all", true);
+global.soundFX = ini_read_real("sound", "fx", true);
+global.soundMusic = ini_read_real("sound", "music", true);
+ini_close();  
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="3" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// control theme music
+if (keyboard_check_pressed(vk_left)) {
+    if (global.soundMusic) {
+        global.soundMusic = false;
+        ini_open("save.ini");
+        ini_write_real("sound", "music", false);
+        ini_close();
+    } else {
+        global.soundMusic = true;
+        ini_open("save.ini");
+        ini_write_real("sound", "music", true);    
+        ini_close();
+    }
+}
+// control sound fx
+if (keyboard_check_pressed(vk_right)) {
+    if (global.soundFX) {
+        global.soundFX = false;
+        ini_open("save.ini");
+        ini_write_real("sound", "fx", false);
+        ini_close();
+    } else {
+        global.soundFX = true;
+        ini_open("save.ini");
+        ini_write_real("sound", "fx", true);    
+        ini_close();
+    }
+}
+// control muting sound
+if (keyboard_check_pressed(vk_up)) {
+    if (global.soundAll) {
+        global.soundAll = false;
+        ini_open("save.ini");
+        ini_write_real("sound", "all", false);
+        ini_close();
+    } else {
+        global.soundAll = true;
+        ini_open("save.ini");
+        ini_write_real("sound", "all", true);    
+        ini_close();
+    }
+}
+
+// start button
+if (keyboard_check_pressed(vk_down))
+    room_goto(rm_Game);
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="5" enumb="27">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>game_end();
 </string>
           </argument>
         </arguments>
@@ -50,9 +156,10 @@ virtual_key_show(key);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_set_colour(c_red);
-draw_set_halign(fa_center);
-draw_text(960, 300, "global.count: " + string(global.count));
+            <string>draw_text(100, 100, global.soundMusic);
+draw_text(100, 200, global.soundFX);
+draw_text(100, 300, global.soundAll);
+
 </string>
           </argument>
         </arguments>

@@ -42,6 +42,7 @@
     <object>objects\oArea</object>
     <object>objects\oMusic</object>
     <object>objects\oLogo</object>
+    <object>objects\oMenu</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Menu</room>
