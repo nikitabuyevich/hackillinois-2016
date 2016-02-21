@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>/// generate random value once
 randMus = floor(random(3));
+neverCreated = false;
 
 audio_stop_sound(snd_theme_a);
 audio_stop_sound(snd_theme_b);
@@ -39,7 +40,8 @@ if (global.soundAll &amp;&amp; global.soundMusic) {
             audio_play_sound(snd_theme_b, 1, true);
     if (randMus == 2)
             audio_play_sound(snd_theme_c, 1, true);
-}
+} else
+    neverCreated = true; 
 </string>
           </argument>
         </arguments>
@@ -62,10 +64,27 @@ if (global.soundAll &amp;&amp; global.soundMusic) {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if (!global.soundAll || !global.soundMusic)
-    audio_pause_all();
-if (global.soundMusic &amp;&amp; global.soundAll)
-    audio_resume_all();
+            <string>if (!global.soundAll || !global.soundMusic) {
+    audio_pause_sound(snd_theme_a);
+    audio_pause_sound(snd_theme_b);
+    audio_pause_sound(snd_theme_c);
+}
+if (global.soundMusic &amp;&amp; global.soundAll) {
+    if (neverCreated) {
+        neverCreated = false;
+        randMus = floor(random(3));
+        if (randMus == 0)
+                audio_play_sound(snd_theme_a, 1, true);
+        if (randMus == 1)
+                audio_play_sound(snd_theme_b, 1, true);
+        if (randMus == 2)
+                audio_play_sound(snd_theme_c, 1, true);
+    } else {
+        audio_resume_sound(snd_theme_a);
+        audio_resume_sound(snd_theme_b);
+        audio_resume_sound(snd_theme_c);
+    } 
+}
 </string>
           </argument>
         </arguments>

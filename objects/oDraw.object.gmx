@@ -80,7 +80,7 @@ draw_text(room_width/2, room_height/2, string(score));
 draw_set_colour(c_white);
 draw_set_font(fnt_highscore);
 draw_set_alpha(1);
-draw_text(room_width/2, 40, "highscore: " + string(global.highscore));
+draw_text(room_width/2, 40, "Highscore: " + string(global.highscore));
 </string>
           </argument>
         </arguments>

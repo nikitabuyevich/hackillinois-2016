@@ -34,15 +34,6 @@ global.randGen = true;
 global.position = false;
 global.eatAnim = false;
 global.detectFood = false;
-global.countBooms = 0;
-
-// saved files variables
-ini_open("save.ini");
-global.highscore =  ini_read_real("score", "highscore", 0);
-global.soundAll = ini_read_real("sound", "all", true);
-global.soundFX = ini_read_real("sound", "fx", true);
-global.soundMusic = ini_read_real("sound", "music", true);
-ini_close();    
 </string>
           </argument>
         </arguments>
