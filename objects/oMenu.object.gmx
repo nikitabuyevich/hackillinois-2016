@@ -185,8 +185,8 @@ if (keyboard_check_pressed(vk_down)) {
 draw_set_font(fnt_default);
 
 // draw font instructions
-draw_text_colour(room_width/2, room_height/2-300, "A buffe chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_white, c_white, c_white, c_white, 1);
-draw_text_colour(room_width/2+2, room_height/2-298, "A buffe chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_black, c_black, c_black, c_black, 0.2);
+draw_text_colour(room_width/2, room_height/2-300, "A buffet chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_white, c_white, c_white, c_white, 1);
+draw_text_colour(room_width/2+2, room_height/2-298, "A buffet chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_black, c_black, c_black, c_black, 0.2);
 
 draw_text_colour(room_width/2, room_height-220, "PROTIP: You can eat two plates#at once. Even if they're on# differnet sides.#He really doesn't wana pay!" , c_white, c_white, c_white, c_white, 1);
 draw_text_colour(room_width/2+1, room_height-219, "PROTIP: You can eat two plates#at once. Even if they're on# differnet sides.#He really doesn't wana pay!" , c_black, c_black, c_black, c_black, 0.2);

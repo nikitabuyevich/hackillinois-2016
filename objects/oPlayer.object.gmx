@@ -179,7 +179,7 @@ else if (alarm[1] != -1 &amp;&amp; sprite_index==spr_avatar_idle) {
             <kind>1</kind>
             <string>if (sprite_index == spr_avatar_eating) {
     startAtIndexZero = false;
-    image_speed = (global.scrollSpeed/10) - 0.35;
+    image_speed = (global.scrollSpeed/20) - 0.13;
     image_angle = 270;
     sprite_index = spr_avatar_idle;
     global.eatAnim = false;
