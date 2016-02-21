@@ -25,11 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//draw_text(room_width/2-50, room_height/2, "score: " + string(score));
-//draw_text(room_width/2-50, room_height/2+25, "highscore: " + string(global.highscore));
-
-draw_text(room_width/2-50, room_height/2, "x: " + string(oPlayer.image_xscale));
-draw_text(room_width/2-50, room_height/2+25, "y: " + string(oPlayer.image_yscale));
+            <string>draw_text(room_width/2-50, room_height/2, "score: " + string(score));
+draw_text(room_width/2-50, room_height/2+25, "highscore: " + string(global.scrollSpeed/10));
 </string>
           </argument>
         </arguments>

@@ -21,6 +21,7 @@
     <sprite>sprites\spr_player_idle</sprite>
     <sprite>sprites\spr_detect</sprite>
     <sprite>sprites\spr_area</sprite>
+    <sprite>sprites\spr_logo</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -40,10 +41,11 @@
     <object>objects\oDetect</object>
     <object>objects\oArea</object>
     <object>objects\oMusic</object>
+    <object>objects\oLogo</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\rm_Game</room>
     <room>rooms\rm_Menu</room>
+    <room>rooms\rm_Game</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
