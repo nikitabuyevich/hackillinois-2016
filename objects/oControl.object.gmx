@@ -34,6 +34,7 @@ global.randGen = true;
 global.position = false;
 global.eatAnim = false;
 global.detectFood = false;
+global.countBooms = 0;
 
 // saved files variables
 ini_open("save.ini");

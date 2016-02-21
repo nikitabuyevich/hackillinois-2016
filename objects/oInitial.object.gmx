@@ -49,13 +49,7 @@ image_yscale = 5;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>y+=global.scrollSpeed;
-
-if (global.tap &amp;&amp; y&lt;=1120) {
-    scr_lose();
-} else if (y&gt;1120)
-    instance_destroy();
-</string>
+            <string></string>
           </argument>
         </arguments>
       </action>

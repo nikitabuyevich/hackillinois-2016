@@ -25,8 +25,8 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>draw_text(room_width/2-50, room_height/2, "score: " + string(score));
-draw_text(room_width/2-50, room_height/2+25, "highscore: " + string(global.scrollSpeed/10));
+            <string>draw_text(room_width/2-50, room_height/2, "score: " + string(global.countBooms));
+draw_text(room_width/2-50, room_height/2+25, "highscore: " + string(global.highscore));
 </string>
           </argument>
         </arguments>

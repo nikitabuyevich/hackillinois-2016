@@ -10,6 +10,5 @@ if (audio_is_playing(snd_fail))
     audio_stop_sound(snd_fail);
 if (global.soundAll && global.soundFX)
     audio_play_sound(snd_fail, 1, false);
-
 room_restart();
 
