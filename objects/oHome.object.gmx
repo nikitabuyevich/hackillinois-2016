@@ -53,6 +53,9 @@ global.home = 0;
             <kind>1</kind>
             <string>global.home = keyboard_check_pressed(vk_backspace);
 if (global.home) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
     room_goto(rm_Menu);
 }
 </string>

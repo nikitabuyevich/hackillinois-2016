@@ -12,6 +12,7 @@
       <sound>sound\snd_theme_b</sound>
       <sound>sound\snd_theme_c</sound>
     </sounds>
+    <sound>sound\snd_select</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_food</sprite>
@@ -38,6 +39,7 @@
     </sprites>
     <sprite>sprites\spr_avatar_idle</sprite>
     <sprite>sprites\spr_avatar_eating</sprite>
+    <sprite>sprites\spr_site</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -51,6 +53,7 @@
     <font>fonts\fnt_default</font>
     <font>fonts\fnt_score</font>
     <font>fonts\fnt_highscore</font>
+    <font>fonts\fnt_site</font>
   </fonts>
   <objects name="objects">
     <object>objects\oFood</object>

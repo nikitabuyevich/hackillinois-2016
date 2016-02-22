@@ -31,6 +31,7 @@ soundMusic = virtual_key_add(room_width/2+128-48, 940-96-48, 96, 96, vk_left);
 soundFX = virtual_key_add(room_width/2-128-48, 940-96-48, 96, 96, vk_right);
 soundAll = virtual_key_add(room_width/2-48, 940-96-48, 96, 96, vk_up);
 start = virtual_key_add(room_width/2-192, 620-96, 384, 192, vk_down);
+link = virtual_key_add(100, room_height-125, 512, 100, vk_home);
 display_set_gui_size(room_width,room_height);
 
 // saved files variables
@@ -113,6 +114,9 @@ instance_create(0, 0, oBGMenu);
             <kind>1</kind>
             <string>// control theme music
 if (keyboard_check_pressed(vk_left)) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
     if (global.soundMusic) {
         global.soundMusic = false;
         ini_open("save.ini");
@@ -127,6 +131,9 @@ if (keyboard_check_pressed(vk_left)) {
 }
 // control sound fx
 if (keyboard_check_pressed(vk_right)) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
     if (global.soundFX) {
         global.soundFX = false;
         ini_open("save.ini");
@@ -141,6 +148,9 @@ if (keyboard_check_pressed(vk_right)) {
 }
 // control muting sound
 if (keyboard_check_pressed(vk_up)) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
     if (global.soundAll) {
         global.soundAll = false;
         ini_open("save.ini");
@@ -156,8 +166,19 @@ if (keyboard_check_pressed(vk_up)) {
 
 // start button
 if (keyboard_check_pressed(vk_down)) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
     room_goto(rm_Game);
     instance_destroy();
+}
+
+// opens link
+if (keyboard_check_pressed(vk_home)) {
+    if (audio_is_playing(snd_select))
+        audio_stop_sound(snd_select);
+    audio_play_sound(snd_select, 1, false);
+    url_open("http://nikitabuyevich.com");
 }
 </string>
           </argument>
@@ -190,6 +211,11 @@ draw_text_colour(room_width/2+1, room_height/2-299, "A buffet chef challenged yo
 
 draw_text_colour(room_width/2, room_height-330, "HOWEVER, what he doesn't know,#is that you can eat TWO meals#at once even if they are#on different tables!" , c_white, c_white, c_white, c_white, 1);
 draw_text_colour(room_width/2+1, room_height-329, "HOWEVER, what he doesn't know,#is that you can eat TWO meals#at once even if they are#on different tables!" , c_black, c_black, c_black, c_black, 0.2);
+
+draw_set_font(fnt_site);
+draw_text_colour(room_width/2, room_height-125, "Developed by" , c_aqua, c_aqua, c_aqua, c_aqua, 1);
+draw_text_colour(room_width/2+1, room_height-125-1, "Developed by" , c_black, c_black, c_black, c_black, 0.2);
+draw_sprite(spr_site, image_index, room_width/2, room_height-168-20);
 
 
 draw_set_font(fnt_highscore);
