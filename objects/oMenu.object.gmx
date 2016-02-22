@@ -206,10 +206,10 @@ if (keyboard_check_pressed(vk_home)) {
 draw_set_font(fnt_default);
 
 // draw font instructions
-draw_text_colour(room_width/2, room_height/2-300, "A buffet chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_white, c_white, c_white, c_white, 1);
+draw_text_colour(room_width/2, room_height/2-300, "A buffet chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_aqua, c_aqua, c_aqua, c_aqua, 1);
 draw_text_colour(room_width/2+1, room_height/2-299, "A buffet chef challenged you to#eat as much food as possible or#you will have to pay for every bite!" , c_black, c_black, c_black, c_black, 0.2);
 
-draw_text_colour(room_width/2, room_height-330, "HOWEVER, what he doesn't know,#is that you can eat TWO meals#at once even if they are#on different tables!" , c_white, c_white, c_white, c_white, 1);
+draw_text_colour(room_width/2, room_height-330, "HOWEVER, what he doesn't know,#is that you can eat TWO meals#at once even if they are#on different tables!" , c_aqua, c_aqua, c_aqua, c_aqua, 1);
 draw_text_colour(room_width/2+1, room_height-329, "HOWEVER, what he doesn't know,#is that you can eat TWO meals#at once even if they are#on different tables!" , c_black, c_black, c_black, c_black, 0.2);
 
 draw_set_font(fnt_site);

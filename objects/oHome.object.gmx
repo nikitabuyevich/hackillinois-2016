@@ -56,6 +56,7 @@ if (global.home) {
     if (audio_is_playing(snd_select))
         audio_stop_sound(snd_select);
     audio_play_sound(snd_select, 1, false);
+    scr_save_highscore();
     room_goto(rm_Menu);
 }
 </string>

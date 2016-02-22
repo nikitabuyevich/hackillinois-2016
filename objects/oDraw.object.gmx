@@ -76,7 +76,12 @@ instance_create(room_width/2, 138, oHome);
             <string>draw_set_colour(c_white);
 draw_set_font(fnt_score);
 draw_set_alpha(alpha);
-draw_text(room_width/2, room_height/2, string(score));
+if (score &lt;= global.highscore)
+    draw_text(room_width/2, room_height/2, string(score));
+else {
+    draw_set_colour(c_lime);
+    draw_text(room_width/2, room_height/2, string(score));
+}
 
 draw_set_font(fnt_highscore);
 draw_text_colour(room_width/2, 40, "Highscore: " + string(global.highscore), c_white, c_white, c_white, c_white, 1);

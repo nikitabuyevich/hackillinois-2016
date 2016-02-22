@@ -48,6 +48,7 @@
   <scripts name="scripts">
     <script>scripts\scr_generate.gml</script>
     <script>scripts\scr_lose.gml</script>
+    <script>scripts\scr_save_highscore.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>
