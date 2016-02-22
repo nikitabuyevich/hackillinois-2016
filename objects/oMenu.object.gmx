@@ -193,9 +193,8 @@ draw_text_colour(room_width/2+1, room_height-329, "HOWEVER, what he doesn't know
 
 
 draw_set_font(fnt_highscore);
-draw_text(room_width/2, 40, "Highscore: " + string(global.highscore));
 draw_text_colour(room_width/2, 40, "Highscore: " + string(global.highscore), c_lime, c_lime, c_lime, c_lime, 1);
-draw_text_colour(room_width/2+1, 40-1, "Highscore: " + string(global.highscore), c_white, c_white, c_white, c_white, 0.2);
+draw_text_colour(room_width/2+2, 40-2, "Highscore: " + string(global.highscore), c_white, c_white, c_white, c_white, 0.4);
 </string>
           </argument>
         </arguments>

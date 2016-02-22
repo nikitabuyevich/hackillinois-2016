@@ -79,11 +79,13 @@ if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
         if (x == 80) {
             global.position = false;
             global.eatAnim = true;
+            oPlayer.startAtIndexZero = false;
             global.detectFood = false;
         }
         else {
             global.position = true;
             global.eatAnim = true;
+            oPlayer.startAtIndexZero = false;
             global.detectFood = false;
         }
         instanceDestroy = true;

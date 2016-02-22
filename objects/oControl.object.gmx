@@ -26,7 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>global.tap = 0;
-key = virtual_key_add(0, 0, room_width, room_height, vk_space);
+key1 = virtual_key_add(0, 0, 328, room_height, vk_space);
+key2 = virtual_key_add(0, 0, room_width, 106, vk_space);
+key3 = virtual_key_add(328, 170, 64, room_height-106, vk_space);
+key4 = virtual_key_add(392, 106, room_width-392, room_height-106, vk_space);
 display_set_gui_size(room_width,room_height);
 // global variables
 score = 0;

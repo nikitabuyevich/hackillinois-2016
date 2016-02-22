@@ -28,6 +28,7 @@
       <sprite>sprites\spr_fx</sprite>
       <sprite>sprites\spr_music</sprite>
       <sprite>sprites\spr_theme</sprite>
+      <sprite>sprites\spr_home</sprite>
     </sprites>
     <sprites name="foodDies">
       <sprite>sprites\spr_donut_die</sprite>
@@ -72,7 +73,9 @@
       </objects>
       <object>objects\oStart</object>
       <object>objects\oBGMenu</object>
+      <object>objects\oHome</object>
     </objects>
+    <object>objects\oLastRoom</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_Menu</room>
