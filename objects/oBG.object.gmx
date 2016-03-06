@@ -56,6 +56,7 @@ if (y&gt;=0 &amp;&amp; !doOnce) {
     doOnce = true;
 }
 y+=global.scrollSpeed;
+y = round(y);
 if (y &gt; room_height) {
     instance_destroy();
 }

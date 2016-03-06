@@ -40,6 +40,7 @@
     <sprite>sprites\spr_avatar_idle</sprite>
     <sprite>sprites\spr_avatar_eating</sprite>
     <sprite>sprites\spr_site</sprite>
+    <sprite>sprites\spr_empty_plate</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_main</background>
@@ -49,6 +50,7 @@
     <script>scripts\scr_generate.gml</script>
     <script>scripts\scr_lose.gml</script>
     <script>scripts\scr_save_highscore.gml</script>
+    <script>scripts\scr_reset_music.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>

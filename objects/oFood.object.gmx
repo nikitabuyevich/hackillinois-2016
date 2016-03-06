@@ -31,6 +31,9 @@ image_yscale = 5;
 image_speed = 0;
 image_index = floor(random(5));
 instanceDestroy = false;
+destroy = false;
+moveAnim = false;
+side = false;
 
 randAngle = floor(random(4));
 if (randAngle==0)
@@ -64,34 +67,39 @@ else
           <argument>
             <kind>1</kind>
             <string>y+=global.scrollSpeed;
+x = round(x);
+y = round(y);
 if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;
 }
 if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
-    global.detectFood = true;
-    if (global.tap) {
+    if (!destroy)
+        global.detectFood = true;
+    if (global.tap &amp;&amp; !destroy) {
+        global.detectFood = false;
+        destroy = true;
         if (audio_is_playing(snd_success))
             audio_stop_sound(snd_success);
         if (global.soundAll &amp;&amp; global.soundFX)
             audio_play_sound(snd_success, 1, false);
         score++;
         if (x == 80) {
+            side = false;
             global.position = false;
             global.eatAnim = true;
             oPlayer.startAtIndexZero = false;
-            global.detectFood = false;
         }
         else {
+            side = true;
             global.position = true;
             global.eatAnim = true;
             oPlayer.startAtIndexZero = false;
-            global.detectFood = false;
         }
         instanceDestroy = true;
         foodItem = image_index;
         image_index = 0;
-        image_speed = (global.scrollSpeed/10) - 0.35
+        image_speed = (global.scrollSpeed/10) - 0.45;
         if (foodItem == 0)
             sprite_index = spr_unagi_die;
         else if (foodItem == 1)
@@ -101,8 +109,22 @@ if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
         else
             sprite_index = spr_hamburger_die;
     }
-} else if ( y-80 &gt; room_height)
-    scr_lose();
+} else if ((y-80 &gt; room_height) &amp;&amp; !destroy) {
+   scr_reset_music();
+   scr_lose();
+}
+
+if (moveAnim &amp;&amp; side) {
+    if (x &lt; 720+80)
+        x += global.scrollSpeed;
+    else
+        instance_destroy();
+} else if (moveAnim) {
+    if (x &gt; -80)
+        x -= global.scrollSpeed;
+    else
+        instance_destroy();
+}
 </string>
           </argument>
         </arguments>
@@ -127,7 +149,8 @@ if ((y &gt;= 1040) &amp;&amp; (y &lt; 1360)) {
             <kind>1</kind>
             <string>if (instanceDestroy) {
     global.detectFood = false;
-    instance_destroy();
+    moveAnim = true;
+    sprite_index = spr_empty_plate;
 }
 </string>
           </argument>

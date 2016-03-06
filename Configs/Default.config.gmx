@@ -80,7 +80,7 @@
     <option_freeze>false</option_freeze>
     <option_frequency>0</option_frequency>
     <option_frontimage>nil</option_frontimage>
-    <option_fullscreen>True</option_fullscreen>
+    <option_fullscreen>False</option_fullscreen>
     <option_gameguid>{CE588C15-88B2-4A7B-99D1-6082454B0E9A}</option_gameguid>
     <option_gameid>298316259</option_gameid>
     <option_haptic_effects>0</option_haptic_effects>
@@ -126,11 +126,11 @@
     <option_ios_advertising_enable>0</option_ios_advertising_enable>
     <option_ios_advertising_key></option_ios_advertising_key>
     <option_ios_advertising_type>iAds</option_ios_advertising_type>
-    <option_ios_app_id></option_ios_app_id>
-    <option_ios_build_version>0</option_ios_build_version>
+    <option_ios_app_id>com.nikitabuyevich.EndlessFeast</option_ios_app_id>
+    <option_ios_build_version>2</option_ios_build_version>
     <option_ios_certificate>&lt; Press refresh to fetch certificate list from Mac&gt;</option_ios_certificate>
     <option_ios_device_type>3</option_ios_device_type>
-    <option_ios_display_name>hackillinois2016</option_ios_display_name>
+    <option_ios_display_name>Endless Feast</option_ios_display_name>
     <option_ios_flurry_enable>false</option_ios_flurry_enable>
     <option_ios_flurry_id></option_ios_flurry_id>
     <option_ios_google_analytics_enable>false</option_ios_google_analytics_enable>
@@ -144,7 +144,7 @@
     <option_ios_icon_57>Configs\Default\ios\icons\icon57.png</option_ios_icon_57>
     <option_ios_icon_72>Configs\Default\ios\icons\icon72.png</option_ios_icon_72>
     <option_ios_icon_76>Configs\Default\ios\icons\icon76.png</option_ios_icon_76>
-    <option_ios_interpolate>-1</option_ios_interpolate>
+    <option_ios_interpolate>0</option_ios_interpolate>
     <option_ios_ipad_retina_splash_png>Configs\Default\ios\iPadRetinasplash.png</option_ios_ipad_retina_splash_png>
     <option_ios_ipad_retina_splash_portrait_png>Configs\Default\ios\iPadRetinasplashPortrait.png</option_ios_ipad_retina_splash_portrait_png>
     <option_ios_ipad_splash_png>Configs\Default\ios\iPadsplash.png</option_ios_ipad_splash_png>
@@ -161,8 +161,8 @@
     <option_ios_iphone_splash_portrait_png>Configs\Default\ios\iPhonesplashPortrait.png</option_ios_iphone_splash_portrait_png>
     <option_ios_major_version>1</option_ios_major_version>
     <option_ios_minor_version>0</option_ios_minor_version>
-    <option_ios_orient_landscape>-1</option_ios_orient_landscape>
-    <option_ios_orient_landscape_right>-1</option_ios_orient_landscape_right>
+    <option_ios_orient_landscape>0</option_ios_orient_landscape>
+    <option_ios_orient_landscape_right>0</option_ios_orient_landscape_right>
     <option_ios_orient_portrait>-1</option_ios_orient_portrait>
     <option_ios_orient_portrait_upside_down>-1</option_ios_orient_portrait_upside_down>
     <option_ios_provisioning>&lt; Press refresh to fetch provisioning list from Mac&gt;</option_ios_provisioning>

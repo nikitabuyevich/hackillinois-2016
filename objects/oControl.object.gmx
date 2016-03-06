@@ -61,7 +61,7 @@ global.detectFood = false;
             <kind>1</kind>
             <string>global.tap = keyboard_check_pressed(vk_space);
 
-global.scrollSpeed = (0.9 + score/(80))*5;
+global.scrollSpeed = (0.9 + score/(80))*5 + 1.5;
 </string>
           </argument>
         </arguments>
