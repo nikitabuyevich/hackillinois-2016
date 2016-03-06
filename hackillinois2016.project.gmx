@@ -13,6 +13,7 @@
       <sound>sound\snd_theme_c</sound>
     </sounds>
     <sound>sound\snd_select</sound>
+    <sound>sound\snd_advanced</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_food</sprite>
@@ -51,6 +52,7 @@
     <script>scripts\scr_lose.gml</script>
     <script>scripts\scr_save_highscore.gml</script>
     <script>scripts\scr_reset_music.gml</script>
+    <script>scripts\scr_play_sound_fx.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_default</font>

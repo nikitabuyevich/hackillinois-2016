@@ -6,4 +6,5 @@ if (audio_is_playing(snd_fail))
 if (global.soundAll && global.soundFX && (room == global.lastRoom))
     audio_play_sound(snd_fail, 1, false);
 scr_reset_music();
+oBG.image_index = 0;
 room_restart();

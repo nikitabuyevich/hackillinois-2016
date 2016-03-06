@@ -67,8 +67,8 @@ else
           <argument>
             <kind>1</kind>
             <string>y+=global.scrollSpeed;
-x = round(x);
-y = round(y);
+x = floor(x);
+y = floor(y);
 if (y &gt; 80 &amp;&amp; !passedSpace) {
     global.randGen = true;
     passedSpace = true;

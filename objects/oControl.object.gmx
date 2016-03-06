@@ -37,6 +37,11 @@ global.randGen = true;
 global.position = false;
 global.eatAnim = false;
 global.detectFood = false;
+
+// variables
+for (var i = 0; i &lt; 8; i++) {
+    advanced[i] = false;
+}
 </string>
           </argument>
         </arguments>
@@ -62,6 +67,32 @@ global.detectFood = false;
             <string>global.tap = keyboard_check_pressed(vk_space);
 
 global.scrollSpeed = (0.9 + score/(80))*5 + 1.5;
+
+if (score &gt;= 50 &amp;&amp; !advanced[0]) {
+    advanced[0] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 100 &amp;&amp; !advanced[1]) {
+    advanced[1] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 150 &amp;&amp; !advanced[2]) {
+    advanced[2] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 200 &amp;&amp; !advanced[3]) {
+    advanced[3] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 250 &amp;&amp; !advanced[4]) {
+    advanced[4] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 300 &amp;&amp; !advanced[5]) {
+    advanced[5] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 350 &amp;&amp; !advanced[6]) {
+    advanced[6] = true;
+    scr_play_sound_fx(snd_advanced);
+} else if (score &gt;= 400 &amp;&amp; !advanced[7]) {
+    advanced[7] = true;
+    scr_play_sound_fx(snd_advanced);
+}
 </string>
           </argument>
         </arguments>
